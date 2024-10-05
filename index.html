@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>JSP Page</title>
+    <title>Home - My Website</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>JSP Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <header>
+        <nav>
+              <li><a href="index.html">Home</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <input type="text" name ="T1" size="33">
+        <input type="checkbox" name="c1" value="ON">Computer Graphic <br> 
+<input type="checkbox" name="c2" value="ON">Computer Network <br> 
+<input type="checkbox" name="c3" value="ON">Introduction to Computer<br> 
+<input type="checkbox" name="c4" value="ON">Web Programming<br>
+<input type="radio" value="r1" checked name="red">Red 
+<input type="radio" value="r2" checked name="blue">Blue 
+<input type="radio" value="r3" checked name="green">Green
+<input type="submit" value="Submit" name="s1"> 
+<input type="reset" value="Reset" name="s2">
+<select name="Type"> 
+    <option>Reading</option> 
+    <option>Whatching TV</option> 
+    <option>Studying</option> 
+    <option>Shoping</option> 
+    <option>Internet</option> 
+    </select>
+    <textarea rows="number of rows" name="tr1" cols="number of columns"></textarea>
+    </main>
+    <h2>Result page</h2> 
+< % 
+String value = request.getParameter("tx1"); 
+out.print("Hello "+value+"!"); 
+%>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+    <h2>Please Input The Value!</h2> 
+<form method="post" action="GetValue.jsp"> 
+<input type="text" name = "tx1"><br> 
+<input type="Submit" value= “Submit”> 
+</form>
+
+<h2>Result page</h2>  
+<%
+    String value = request.getParameter("tx1");
+    out.print("Hello " + value + "!");
+%>
+
+
+</body>
+</html>
